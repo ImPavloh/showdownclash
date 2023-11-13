@@ -1,6 +1,6 @@
 <div align="center">
   
-![Logo](https://github.com/ImPavloh/showdownclash/blob/main/logo.png)
+![Logo](https://github.com/ImPavloh/showdownclash/blob/main/recursos/logo.png)
   
 <a href="https://github.com/ImPavloh" target="_blank"><img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"></a>
 <a href="https://twitter.com/ImPavloh" target="_blank"><img src="https://img.shields.io/badge/Seguir-%231DA1F2.svg?style=for-the-badge&logo=twitter&logoColor=white"></a>
