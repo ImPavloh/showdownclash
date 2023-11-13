@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Showdown Clash - Una emocionante aventura de juego inspirada en el clásico Mario Bros.">
+    <meta name="keywords" content="Showdown Clash, videojuego, Mario Bros, aventura">
+    <title>Showdown Clash</title>
+    <link rel="shortcut icon" href="../recursos/logo.png" type="image/png">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<!-- Función simple de JavaScript en la que carga el juego en el iframe solo si el tamaño de la pantalla es mayor que el de un dispositivo móvil -->
+<script>
+    window.onload = function() { 
+        var width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+        if (width > 768) {
+            document.getElementById('juegoIframe').src = "https://v6p9d9t4.ssl.hwcdn.net/html/9056563/index.html";
+        }
+    };
+</script>
+
+<body>
+    <div id="juego">
+        <!-- Encabezado - Navegación e interactividad con un bloque -->
+        <header class="sombra">
+            <div class="bloque2 sombra">
+                <a href="index.html"><img src="../recursos/menu.png" alt="Volver al menú"></a>
+            </div>
+        </header>
+
+        <!-- Área principal del juego -->
+        <main class="juego">
+            <img src="../recursos/tuber.png" class="tuberia1" draggable="false" alt="Tubería izquierda">
+            
+            <section class="contenedor">
+
+                <!-- Visualización del juego -->
+                <section id="iframecontenedor" class="sombra">
+                    <iframe title="Showdown Clash" allow="autoplay; midi; gamepad; cross-origin-isolated" seamless="" allowfullscreen="" scrolling="no" id="juegoIframe"></iframe>
+                </section>
+
+            </section>
+            <img src="../recursos/tubel.png" class="tuberia2" draggable="false" alt="Tubería derecha">
+        </main>
+
+        <!-- Decoración adicional del juego -->
+        <div class="contenedor2">
+            <div class="decoracion sombra"></div>
+        </div>
+
+            <!-- Div solo para resolucion de movil o tablet -->
+        <main id="contenedorMovil">
+            <section class="movil">
+                <h1>No compatible</h1>
+                <p>Actualmente este juego no esta disponible para dispositivos moviles como telefonos o tabletas. Prueba a jugar desde un ordenador.</p>
+                <!-- <img src="https://i.imgur.com/f4BoLxC.png" alt="No compatible"></img> -->
+            </section>
+        </main>
+    </div>
+</body>
+</html>

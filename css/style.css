@@ -1,0 +1,455 @@
+/* Tipografia de Mario Bros */
+@import url(https://fonts.cdnfonts.com/css/new-super-mario-font-u);
+
+
+/* Estilos para scroll/barra de desplazamiento */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgb(56, 56, 33);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(255, 255, 133);
+	border-radius: 5vh;
+}
+
+
+/* ESTILOS GLOBALES */
+* {
+	user-select: none !important; /* Para que no se pueda seleccionar texto */
+	font-family: 'New Super Mario Font U', sans-serif; /* Estilo de fuente Mario importada en html */;
+}
+
+html, body, iframe {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+a { text-decoration: none; } /* Utilizo esto para que no se vea un linea debajo de los links/"a" */
+
+p, h1, h2, h3, ul, ol, legend {
+	color: white;
+	text-shadow: 0px 0px 5px black;
+}
+
+button, img { transition: 0.5s; }
+
+caption, table, tr, th, td, button {
+	border: 2px solid black;
+	border-radius: 5px;
+	padding: 5px;
+}
+
+table {
+	margin-top: 10px;
+}
+
+caption {
+	background-color: black;
+	color: white;
+}
+
+footer {
+	animation: reboteVertical2 1s ease 0s 1 normal forwards;
+	color: rgb(255, 255, 255);
+	background-color: rgba(11, 39, 2, 0.6);
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	border-top-right-radius: 50%;
+	border-top-left-radius: 50%;
+	border-top: 5px white solid;
+}
+
+header img {
+	animation: parpadeo 5s infinite;
+	width: 5vw;
+	height: 5vw;
+	background-size: cover;
+}
+
+header > div {
+	display: flex;
+	align-items: center;
+}
+
+header {
+	padding: 20px;
+	z-index: 10;
+	animation: reboteVertical 1s ease 0s 1 normal forwards;
+	background: url('../recursos/banner.jpg') no-repeat center / cover;
+	width: 100%;
+	border-bottom-right-radius: 40%;
+	border-bottom-left-radius: 40%;
+}
+
+/* Formularios */
+input[type="text"], input[type="email"], select, textarea { /* estilos de los input */
+	text-align: center !important;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+	padding: 10px;
+	width: 100%;
+	box-sizing: border-box; /* para que el input ocupe el 100% de la ventana */
+	transition: border-color 0.3s ease-in-out;
+}
+
+input[type="submit"], input[type="reset"] { /* estilos de los botones */
+	margin-bottom: 0 !important;
+	margin: 10px;
+	background-color: #ffffff;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+input[type="text"]:focus, input[type="email"]:focus, select:focus, textarea:focus { outline: 0.2vw rgb(100, 130, 200) solid; } /* cuando el usuario se enfoca/toca el input */
+input[type="submit"] { background-color: #e2ffdf; }
+input[type="reset"] { background-color: #ffdada; }
+input[type="submit"]:hover, input[type="reset"]:hover { transform: scale(1.05); }
+input[type="submit"], input[type="reset"], input[type="text"], input[type="email"] { padding: 15px; }
+legend { color: blanchedalmond; }
+
+fieldset {
+	background-color: rgba(180, 230, 255, 0.3);
+	border-color: black;
+	border-radius: 5px;
+}
+
+
+
+
+/* ESTILOS ID */
+#iframecontenedor {
+	background-color: #0a2502;
+	width: 50vw;
+	height: calc(50vw * 9 / 16);
+	aspect-ratio: 16/9;
+	border-top: 0.2vw solid white;
+	border-right: 0.2vw solid white;
+	border-left: 0.2vw solid white;
+	border-top-left-radius: 2vw;
+	border-top-right-radius: 2vw;
+	overflow: hidden;
+	z-index: 2;
+}
+
+#index, #juego, #contacto {
+	background-attachment: fixed;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+#juego { background: url(../recursos/fondo3.png) no-repeat bottom / cover; /* Fondo del apartado index */ }
+#index { background: url(../recursos/fondo2.png) no-repeat bottom / cover; /* Fondo del apartado ayuda */ }
+#contacto { background: url(../recursos/fondo.jpg) no-repeat center / cover; /* Fondo del apartado contacto */ }
+
+#iframecontenedor, #index, #juego {
+	margin: 0px;
+	padding: 0px;
+}
+
+/* ESTILOS CLASES */
+.tuberia1, .tuberia2 {
+	width: 25vw;
+}
+
+.sombra { box-shadow: 0 0 15px 0px rgba(0, 0, 0, 0.6); }
+.sombra-bloque { box-shadow: 1px 1px 10px 5px rgba(255, 255, 0, 0.6); }
+
+.juego, .bloque, .links, #contenedorMovil {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+header, .contenedor2, .contenedor, .estado, .instrucciones {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
+
+.navegacion {
+	background-image: linear-gradient(to right, rgba(51, 214, 255, 0.5), rgba(180, 233, 255, 0.3), rgba(165, 193, 254, 0.6));
+	padding: 1vw;
+	margin: 2vw;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-end;
+	border-radius: 20px;
+	border: 3px white solid;
+	animation: aparicion 1s ease 0s 1 normal;
+}
+
+.boton-link {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.formulario {
+	margin-top: 4vw;
+	width: 50%;
+	background-color: rgba(255, 255, 255, 20%);
+	padding: 1vw;
+	flex-direction: column;
+	border-radius: 1.5vw;
+	border: 0.25vw white solid;
+	animation: aparicion 1s ease 0s 1 normal;
+}
+
+.contenedor3 { width: 80%; }
+
+.contenedor4 { 
+	display: flex;
+	flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.juego, .contenedor3 {
+	padding-top: 20px;
+}
+
+.juego {
+	margin-top: 1.8vw;
+	overflow: hidden;
+}
+
+.decoracion {
+	background-image: url(../recursos/bloque-ladrillo.png); /* Imagen de fondo */
+	background-size: contain;
+	width: 55vw;
+	height: 5vw;
+	z-index: 3;
+}
+
+.estado, .instrucciones {
+	flex: 1;
+	padding: 1vw;
+	margin: 2vw;
+	background-color: rgba(255, 255, 255, 0.3);
+	border-radius: 20px;
+	border: 3px white solid;
+	transition: 0.3s;
+	text-align: left;
+}
+
+.estado h2, .instrucciones > h2 {
+	margin: 0px;
+	padding: 0px;
+}
+
+.estado:hover, .instrucciones:hover {
+	scale: 1.1;
+	background-color: rgba(169, 200, 255, 0.5);
+	box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 0.4);
+	border-radius: 10px;
+}
+
+.estado { animation: reboteHorizontalIzq 1s ease 0s 1 normal forwards; }
+.instrucciones { animation: reboteHorizontalDer 1s ease 0s 1 normal forwards; }
+
+.titulo {
+	margin: 0px;
+	text-align: center;
+	color: white;
+}
+
+.izq { float: left; }
+.der { float: right; }
+
+/* Bloque interrogacion de navegacion con el contenido oculto con animacion de parpadeo infinito */
+.bloque {
+	animation: parpadeo 3s infinite;
+	margin-left: 5vw;
+	margin-right: 5vw;
+	margin-top: 1.5vw;
+	margin-bottom: 1.5vw;
+	width: 5vw;
+	height: 5vw;
+	background: url('../recursos/bloque-interrogacion.png') no-repeat;
+	background-size: cover;
+}
+
+.bloque2 {
+	width: 5vw;
+	height: 5vw;
+	background: url('../recursos/bloque-usado.png') no-repeat;
+	background-size: cover;
+}
+
+.bloque img {
+	display: none; /* oculta la imagen */
+	width: 3vw;
+	height: 3vw;
+}
+
+.logo { height: 50px; }
+
+.boton:hover, .logo:hover {
+	scale: 1.1;
+	transition: 0.5s;
+}
+
+.boton {
+	color: black;
+	background-color: white;
+	padding: 10px;
+	width: 100px;
+	border-radius: 5px;
+	border: 2px black solid;
+	cursor: pointer;
+}
+
+/* Si se pasa el raton por encima se ejecuta una animacion y se muestra la imagen con otra animacion */
+.bloque:hover {
+	animation: desactivado 0.5s ease 0s 1 forwards;
+	overflow: hidden; /* hace que no se vea la animacion de caida de la imagen fuera del div */;
+}
+
+.bloque:hover img {
+	display: initial; /* cambia el estado de oculto */
+	animation: reboteVertical 0.5s ease 0s 1 forwards; /* utiliza la misma animacion que el iframe para la aparicion */;
+}
+
+.contenedor { animation: reboteVertical2 1s; }
+.tuberia1 { animation: reboteHorizontalIzq 1s ease 0s 1 normal forwards; }
+.tuberia2 { animation: reboteHorizontalDer 1s ease 0s 1 normal forwards; }
+.radio { display: inline-block; }
+
+.movil {
+    display: none;
+    width: 80%;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+	border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.movil > img {
+	border-radius: 15px;
+	height: 40%;
+}
+
+
+/* ESTILOS RESPONSIVE */
+/*
+    Movil – 320px — 480px
+    iPad - Tablets – 481px — 768px
+    Portatil – 769px — 1024px
+    PC – 1025px — 1200px
+    TV – 1201px and more
+*/
+
+@media screen and (max-width: 768px) {
+	#contenedorMovil {
+		height: 40vh;
+	}
+	.contenedor2, .juego {
+		display: none;
+	}
+	.movil {
+		display: block;
+	}
+	h2 {
+		font-size: smaller;
+	}
+	table, ol, ul {
+		font-size: smaller;
+	}
+	.formulario {
+		width: 80%;
+	}
+	.contenedor3 {
+		width: 90%;
+	}
+	.boton-link {
+		width: 50%;
+		margin-top: 10px;
+	}
+	.estado, .instrucciones {
+		flex: auto;
+	}
+	.contenedor4 {
+		margin-bottom: 13vh;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.formulario {
+		width: 90%;
+	}
+	.contenedor3, .boton-link {
+		width: 100%;
+	}
+	.bloque2, header img {
+		width: 10vw;
+		height: 10vw;
+	}
+}
+
+/*
+ANIMACIONES
+Demasiadas tal vez, pero quedan bien :)
+*/
+
+@keyframes reboteHorizontalIzq { /* animacion de aparicion de la tuberia de la izquierda con rebote */
+    0% { animation-timing-function: ease-in; opacity: 0; transform: translateX(-250px); }
+    38%, 72%, 90%, 100% { opacity: 1; transform: translateX(0); }
+    55% { transform: translateX(-68px); }
+    81% { transform: translateX(-28px); }
+    95% { transform: translateX(-8px); }
+}
+@keyframes reboteHorizontalDer { /* animacion de aparicion de la tuberia de la derecha con rebote */
+    0% { animation-timing-function: ease-in; opacity: 0; transform: translateX(250px); }
+    38%, 72%, 90%, 100% { opacity: 1; transform: translateX(0); }
+    55% { transform: translateX(68px); }
+    81% { transform: translateX(32px); }
+    95% { transform: translateX(8px); }
+}
+@keyframes reboteVertical { /* animacion de caida con opacidad y rebote */
+    0%, 60%, 75%, 90%, 100% { transition-timing-function: ease-in-out; }
+    0% { opacity: 0; transform: translate3d(0, -3000px, 0); }
+    60% { opacity: 1; transform: translate3d(0, 0px, 0); }
+    75% { transform: translate3d(0, -10px, 0); }
+}
+@keyframes reboteVertical2 { /* animacion de subida con opacidad y rebote */
+    0%, 60%, 75%, 90%, 100% { transition-timing-function: ease-in-out; }
+    0% { opacity: 0; transform: translate3d(0, 1000px, 0); }
+    60% { opacity: 1; transform: translate3d(0, 0px, 0); }
+    75% { transform: translate3d(0, 10px, 0); }
+}
+@keyframes desactivado { /* animacion cuando se hace hover al bloque */
+    0% { transform: scale3d(1, 1, 1); }
+    30% { transform: scale3d(1.25, 0.8, 1); }
+    40% { transform: scale3d(0.75, 1, 1); }
+    50% { transform: scale3d(1.15, 0.8, 1); }
+    65% { transform: scale3d(0.95, 1, 1); }
+    75% { transform: scale3d(1.05, 1, 1); }
+    100% { transform: scale3d(1, 1, 1); background-image: url('../recursos/bloque-usado.png'); box-shadow: none; }
+}
+@keyframes parpadeo { /* animacion infinita de decoracion del bloque hasta que se haga clic */
+    0%, 50%, 100% { opacity: 0.5; }
+    25%, 75% { opacity: 1; }
+}
+@keyframes aparicion { /* animacion de aparicion */
+    0% { opacity: 0; transform: scale(.3); }
+    50% { opacity: 1; transform: scale(1.0); }
+    70% { transform: scale(0.9); }
+    100% { transform: scale(1); }
+}
