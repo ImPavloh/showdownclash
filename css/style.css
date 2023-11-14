@@ -28,11 +28,18 @@ html, body, iframe {
 	height: 100%;
 	margin: 0;
 	padding: 0;
+	border: none;
+}
+
+hr {
+	color:white;
+	width: 50%;
+	margin: auto;
 }
 
 a { text-decoration: none; } /* Utilizo esto para que no se vea un linea debajo de los links/"a" */
 
-p, h1, h2, h3, ul, ol, legend {
+p, h1, h2, h3, ul, ol {
 	color: white;
 	text-shadow: 0px 0px 5px black;
 }
@@ -114,7 +121,7 @@ input[type="submit"] { background-color: #e2ffdf; }
 input[type="reset"] { background-color: #ffdada; }
 input[type="submit"]:hover, input[type="reset"]:hover { transform: scale(1.05); }
 input[type="submit"], input[type="reset"], input[type="text"], input[type="email"] { padding: 15px; }
-legend { color: blanchedalmond; }
+legend { color: blanchedalmond; text-shadow: 0px 0px 5px black; }
 
 fieldset {
 	background-color: rgba(180, 230, 255, 0.3);
@@ -182,7 +189,7 @@ header, .contenedor2, .contenedor, .estado, .instrucciones {
 }
 
 .navegacion {
-	background-image: linear-gradient(to right, rgba(51, 214, 255, 0.5), rgba(180, 233, 255, 0.3), rgba(165, 193, 254, 0.6));
+	background-image: linear-gradient(to right, rgba(36, 146, 173, 0.5), rgba(180, 233, 255, 0.3), rgba(110, 130, 173, 0.6));
 	padding: 1vw;
 	margin: 2vw;
 	display: flex;
@@ -240,7 +247,7 @@ header, .contenedor2, .contenedor, .estado, .instrucciones {
 	flex: 1;
 	padding: 1vw;
 	margin: 2vw;
-	background-color: rgba(255, 255, 255, 0.3);
+	background-color: rgba(0, 50, 100, 0.2);
 	border-radius: 20px;
 	border: 3px white solid;
 	transition: 0.3s;
@@ -253,8 +260,8 @@ header, .contenedor2, .contenedor, .estado, .instrucciones {
 }
 
 .estado:hover, .instrucciones:hover {
-	scale: 1.1;
-	background-color: rgba(169, 200, 255, 0.5);
+	scale: 1.05;
+	background-color: rgba(0, 50, 100, 0.4);
 	box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 0.4);
 	border-radius: 10px;
 }
@@ -300,8 +307,8 @@ header, .contenedor2, .contenedor, .estado, .instrucciones {
 .logo { height: 50px; }
 
 .boton:hover, .logo:hover {
-	scale: 1.1;
-	transition: 0.5s;
+	scale: 1.05;
+	transition: 0.3s;
 }
 
 .boton {
@@ -357,6 +364,10 @@ header, .contenedor2, .contenedor, .estado, .instrucciones {
 */
 
 @media screen and (max-width: 768px) {
+	* { /* En caso de tener resolucion pequeña se desactivan las animaciones para evitar problemas de rendimiento */
+		animation: none !important;
+		transition: none !important;
+	}
 	#contenedorMovil {
 		height: 40vh;
 	}

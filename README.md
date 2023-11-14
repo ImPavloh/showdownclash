@@ -41,8 +41,8 @@ El sitio tiene varias páginas:
 ## 📝 Créditos
 - Página web creada completamente por mi.
 - Algunos recursos (tipografía e imágenes) y el juego original (New Super Mario Bros para la Nintendo DS) son propiedad de Nintendo.
-- Juego fanmade original creado mediante Unity 2018 por [ipodtouch0218](https://github.com/ipodtouch0218). Modificado por mi de manera que esté optimizado para WebGL y esté disponible en español.
+- Juego fanmade original creado mediante Unity 2018 por [ipodtouch0218](https://github.com/ipodtouch0218). Modificado por mi de manera que esté optimizado para WebGL y disponible en español.
 
-## 📃Licencia
+## 📃 Licencia
 
 > Al usar este proyecto, aceptas los términos de la [licencia](https://github.com/ImPavloh/showdownclash/blob/main/LICENSE).

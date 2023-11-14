@@ -16,19 +16,18 @@
                     <a href="juego.html"><img src="../recursos/jugar.png" alt="Jugar" title="Ir a jugar"></a>
                 </div>
                 <div class="bloque2 sombra">
-                    <a href="../index.html"><img src="../recursos/menu.png" alt="Volver al menú"></a>
+                    <a href="../index.html"><img src="../recursos/menu.png" alt="Menú" title="Volver al menú"></a>
                 </div>
                 <div class="bloque der sombra-bloque">
-                    <a href="https://github.com/ImPavloh/showdownclash"><img src="../recursos/github.png" alt="GitHub"  title="Ir al repositorio"></a>
+                    <a href="https://github.com/ImPavloh/showdownclash" target="_blank" rel="noopener noreferrer"><img src="../recursos/github.png" alt="GitHub"  title="Ir al repositorio"></a>
                 </div>
             </div>
         </header>
-
         <!-- Contenido principal -->
         <main class="formulario sombra">
             <form method="post">
                 <fieldset>
-                    <legend>Informacion de contacto</legend>
+                    <legend style="text-align: left;">Informacion de contacto</legend>
                     <label for="nombre">Nombre o usuario</label><br>
                     <input type="text" id="nombre" name="nombre" required><br>
                     
@@ -37,15 +36,15 @@
                 </fieldset>
 
                 <fieldset>
-                    <legend>Mensaje</legend>
-                    <textarea id="mensaje" name="mensaje" rows="2" required style="resize: none;"></textarea><br>
+                    <legend style="text-align: right;">Mensaje</legend>
+                    <label for="mensaje">Mensaje o comentario</label><br>
+                    <textarea id="mensaje" name="mensaje" rows="2" required style="resize: none;"></textarea>
                 </fieldset>
 
                 <fieldset>
                     <legend>Preferencias</legend>
                     <input type="checkbox" id="preferenciaNotificaciones" name="preferenciaNotificaciones">
                     <label for="preferenciaNotificaciones">Deseo recibir notificaciones sobre actualizaciones importantes del juego</label><br>
-
                     <input type="checkbox" id="preferenciaEventos" name="preferenciaEventos">
                     <label for="preferenciaEventos">Estoy interesado en participar en eventos especiales o temporales</label>
                 </fieldset>
