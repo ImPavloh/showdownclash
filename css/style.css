@@ -388,6 +388,10 @@ header, .contenedor2, .contenedor, .estado, .instrucciones {
 	.contenedor4 {
 		margin-bottom: 13vh;
 	}
+	.bloque, .bloque2, header img {
+		width: 10vw;
+		height: 10vw;
+	}
 }
 
 @media screen and (max-width: 480px) {
@@ -396,10 +400,6 @@ header, .contenedor2, .contenedor, .estado, .instrucciones {
 	}
 	.contenedor3, .boton-link {
 		width: 100%;
-	}
-	.bloque2, header img {
-		width: 10vw;
-		height: 10vw;
 	}
 }
 
