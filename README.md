@@ -30,19 +30,19 @@ El sitio tiene varias páginas:
 
 ## 🌟 Galería
 ### index.html
-<img src="https://i.imgur.com/dm12crg.png">
+<img src="https://i.imgur.com/fhBJdTx.png">
 
 ### contacto.html
-<img src="https://i.imgur.com/0oJvTch.png">
+<img src="https://i.imgur.com/xikn4Uw.png">
 
 ### juego.html
-<img src="https://i.imgur.com/9NgVSp3.png">
+<img src="https://i.imgur.com/DWHPglO.png">
 
 ## 📝 Créditos
-- Página web creada completamente por mi.
-- Algunos recursos (tipografía e imágenes) y el juego original (New Super Mario Bros para la Nintendo DS) son propiedad de Nintendo.
+- Página web creada por mi.
+- Algunos recursos (como la tipografía e imágenes) y el juego original (New Super Mario Bros para la Nintendo DS) son propiedad de Nintendo.
 - Juego fanmade original creado mediante Unity 2018 por [ipodtouch0218](https://github.com/ipodtouch0218). Modificado por mi de manera que esté optimizado para WebGL y disponible en español.
 
 ## 📃 Licencia
 
-> Al usar este proyecto, aceptas los términos de la [licencia](https://github.com/ImPavloh/showdownclash/blob/main/LICENSE).
+> Este proyecto está bajo los términos de la [licencia MIT](https://github.com/ImPavloh/showdownclash/blob/main/LICENSE).

@@ -13,13 +13,15 @@
         <header class="sombra">
             <div>
                 <div class="bloque izq sombra-bloque">
-                    <a href="juego.html"><img src="../recursos/jugar.png" alt="Jugar" title="Ir a jugar"></a>
+                    <a href="juego.html"><img src="../recursos/jugar.png" alt="Jugar" title="Ir a jugar" draggable="false"></a>
                 </div>
                 <div class="bloque2 sombra">
-                    <a href="../index.html"><img src="../recursos/menu.png" alt="Menú" title="Volver al menú"></a>
+                    <a href="../index.html"><img src="../recursos/menu.png" alt="Menú" title="Volver al menú" draggable="false"></a>
                 </div>
                 <div class="bloque der sombra-bloque">
-                    <a href="https://github.com/ImPavloh/showdownclash" target="_blank" rel="noopener noreferrer"><img src="../recursos/github.png" alt="GitHub"  title="Ir al repositorio"></a>
+                    <a href="https://github.com/ImPavloh/showdownclash" target="_blank" rel="noopener noreferrer">
+                        <img src="../recursos/github.png" alt="GitHub"  title="Ir al repositorio" draggable="false">
+                    </a>
                 </div>
             </div>
         </header>
@@ -64,10 +66,10 @@
                 <fieldset>
                     <legend>Consulta</legend>
                     <select id="seleccion" name="seleccion">
-                        <option value="general">General</option>
-                        <option value="reporteHugador">Reporte de jugador</option>
-                        <option value="reporteConectividad">Reporte de conectividad</option>
-                        <option value="arreglar">Reporte de bug o error</option>
+                        <option value="general">Consulta General</option>
+                        <option value="jugador">Informe de jugador</option>
+                        <option value="conectividad">Informe de conectividad</option>
+                        <option value="bug">Informe de error o problema</option>
                         <option value="sugerencia">Sugerencia de mejora</option>
                     </select>
                 </fieldset>
@@ -76,6 +78,12 @@
                 <input type="reset" value="Limpiar">
             </form>
         </main>
+
+        <!-- Pie de página -->
+        <footer>
+            <p><b>Creado por Pavloh</b> ~ <i>Showdown Clash</i></p>
+            <p>Este proyecto no esta afiliado con Nintendo.</p>
+        </footer>
     </div> 
 </body>
 </html>

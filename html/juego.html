@@ -25,30 +25,32 @@
         <!-- Encabezado - Navegación e interactividad con un bloque -->
         <header class="sombra">
             <div class="bloque2 sombra">
-                <a href="../index.html"><img src="../recursos/menu.png" alt="Menú" title="Volver al menú"></a>
+                <a href="../index.html">
+                    <img src="../recursos/menu.png" alt="Menú" title="Volver al menú" draggable="false">
+                </a>
             </div>
         </header>
 
         <!-- Área principal del juego -->
-        <main class="juego">
-            <img src="../recursos/tuber.png" class="tuberia1" draggable="false" alt="Tubería izquierda">
-            
-            <section class="contenedor">
+        <main class="contenedor2">
+            <div class="juego">
+                <img src="../recursos/tuber.png" class="tuberia1" draggable="false" alt="Tubería izquierda">
+                
+                <section class="contenedor">
 
-                <!-- Visualización del juego -->
-                <section id="iframecontenedor" class="sombra">
-                    <iframe title="Showdown Clash" allow="autoplay; midi; gamepad; cross-origin-isolated" seamless="" allowfullscreen="" scrolling="no" id="juegoIframe"></iframe>
+                    <!-- Visualización del juego -->
+                    <section id="iframecontenedor" class="sombra">
+                        <iframe title="Showdown Clash" allow="autoplay; midi; gamepad; cross-origin-isolated" seamless="" allowfullscreen="" scrolling="no" id="juegoIframe"></iframe>
+                    </section>
+
                 </section>
+                <img src="../recursos/tubel.png" class="tuberia2" draggable="false" alt="Tubería derecha">
+            </div>
 
-            </section>
-            <img src="../recursos/tubel.png" class="tuberia2" draggable="false" alt="Tubería derecha">
-        </main>
-
-        <!-- Decoración adicional del juego -->
-        <div class="contenedor2">
+            <!-- Decoración adicional del juego -->
             <div class="decoracion sombra"></div>
-        </div>
-
+        </main>
+        
             <!-- Div solo para resolucion de movil o tablet -->
         <main id="contenedorMovil">
             <section class="movil">
@@ -57,6 +59,12 @@
                 <!-- <img src="https://i.imgur.com/f4BoLxC.png" alt="No compatible"></img> -->
             </section>
         </main>
+        
+        <!-- Pie de página -->
+        <footer>
+            <p><b>Creado por Pavloh</b> ~ <i>Showdown Clash</i></p>
+            <p>Este proyecto no esta afiliado con Nintendo.</p>
+        </footer>
     </div>
 </body>
 </html>

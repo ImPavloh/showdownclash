@@ -62,15 +62,13 @@ caption {
 }
 
 footer {
-	animation: reboteVertical2 1s ease 0s 1 normal forwards;
-	color: rgb(255, 255, 255);
-	background-color: rgba(11, 39, 2, 0.6);
-	position: fixed;
-	bottom: 0;
-	width: 100%;
-	border-top-right-radius: 50%;
-	border-top-left-radius: 50%;
-	border-top: 5px white solid;
+    /*animation: reboteVertical2 1s ease 0s 1 normal;*/
+    color: rgb(255, 255, 255);
+    background-color: rgba(11, 39, 2, 0.6);
+    width: 100%;
+    border-top-right-radius: 50%;
+    border-top-left-radius: 50%;
+    border-top: 5px white solid;
 }
 
 header img {
@@ -88,7 +86,7 @@ header > div {
 header {
 	padding: 20px;
 	z-index: 10;
-	animation: reboteVertical 1s ease 0s 1 normal forwards;
+	animation: reboteVertical 1s ease 0s 1 normal;
 	background: url('../recursos/banner.jpg') no-repeat center / cover;
 	width: 100%;
 	border-bottom-right-radius: 40%;
@@ -148,14 +146,14 @@ fieldset {
 }
 
 #index, #juego, #contacto {
-	background-attachment: fixed;
-	min-height: 100vh;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	text-align: center;
-	overflow-y: auto;
-	overflow-x: hidden;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    overflow-y: auto;
+    overflow-x: hidden;
+    align-items: center;
+    justify-content: space-between;
 }
 
 #juego { background: url(../recursos/fondo3.png) no-repeat bottom / cover; /* Fondo del apartado index */ }
@@ -188,27 +186,23 @@ header, .contenedor2, .contenedor, .estado, .instrucciones {
 	text-align: center;
 }
 
-.navegacion {
-	background-image: linear-gradient(to right, rgba(36, 146, 173, 0.5), rgba(180, 233, 255, 0.3), rgba(110, 130, 173, 0.6));
-	padding: 1vw;
-	margin: 2vw;
-	display: flex;
-	flex-wrap: wrap;
-	align-items: flex-end;
-	border-radius: 20px;
-	border: 3px white solid;
-	animation: aparicion 1s ease 0s 1 normal;
-}
-
 .boton-link {
-    width: 25%;
+    width: 30%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+	align-content: center;
+	align-items: center;
+	background-image: linear-gradient(to right, rgba(36, 146, 173, 0.5), rgba(180, 233, 255, 0.3), rgba(110, 130, 173, 0.6));
+	padding: 1vw;
+	margin: 2vw;
+	border-radius: 20px;
+	border: 3px white solid;
+	animation: aparicion 1s ease 0s 1 normal;
+	transition: 0.3s;
 }
 
 .formulario {
-	margin-top: 4vw;
 	width: 50%;
 	background-color: rgba(255, 255, 255, 20%);
 	padding: 1vw;
@@ -222,8 +216,8 @@ header, .contenedor2, .contenedor, .estado, .instrucciones {
 
 .contenedor4 { 
 	display: flex;
-	flex-wrap: wrap;
-    justify-content: space-between;
+	flex-wrap: nowrap;
+	justify-content: space-around;
 }
 
 .juego, .contenedor3 {
@@ -259,8 +253,7 @@ header, .contenedor2, .contenedor, .estado, .instrucciones {
 	padding: 0px;
 }
 
-.estado:hover, .instrucciones:hover {
-	scale: 1.05;
+.estado:hover, .instrucciones:hover, .boton-link:hover {
 	background-color: rgba(0, 50, 100, 0.4);
 	box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 0.4);
 	border-radius: 10px;
@@ -304,9 +297,12 @@ header, .contenedor2, .contenedor, .estado, .instrucciones {
 	height: 3vw;
 }
 
-.logo { height: 50px; }
+.logo {
+	height: 50px;
+	animation: parpadeo 5s infinite;
+}
 
-.boton:hover, .logo:hover {
+.boton:hover {
 	scale: 1.05;
 	transition: 0.3s;
 }
@@ -390,18 +386,21 @@ header, .contenedor2, .contenedor, .estado, .instrucciones {
 		width: 90%;
 	}
 	.boton-link {
-		width: 50%;
+		width: 40%;
 		margin-top: 10px;
 	}
 	.estado, .instrucciones {
 		flex: auto;
 	}
-	.contenedor4 {
+	.instrucciones {
 		margin-bottom: 13vh;
 	}
 	.bloque, .bloque2, header img {
 		width: 10vw;
 		height: 10vw;
+	}
+	.contenedor4 {
+		flex-wrap: wrap;
 	}
 }
 
@@ -410,7 +409,7 @@ header, .contenedor2, .contenedor, .estado, .instrucciones {
 		width: 90%;
 	}
 	.contenedor3, .boton-link {
-		width: 100%;
+		width: 90%;
 	}
 }
 
