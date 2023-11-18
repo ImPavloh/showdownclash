@@ -25,18 +25,22 @@ El sitio tiene varias páginas:
 - `index.html`: Página principal que introduce a los usuarios al juego.
 - `juego.html`: Dedicada al juego en sí, proporcionando una experiencia de juego interactiva. No disponible en dispositivos móviles.
 - `contacto.html`: Permite a los usuarios enviar consultas, sugerencias o problemas relacionadas con el juego. (Formulario visual, aún no funcional)
+- `error.html`: Página de error que se muestra cuando el usuario intenta enviar los datos del formulario.
 
 - `style.css`: Aarchivo de estilos, donde está la tipografía, animaciones y diseño general.
 
 ## 🌟 Galería
 ### index.html
-<img src="https://i.imgur.com/fhBJdTx.png">
+<a href="https://github.com/ImPavloh/showdownclash/blob/main/index.html" target="_blank"><img src="https://i.imgur.com/fhBJdTx.png"></a>
 
 ### contacto.html
-<img src="https://i.imgur.com/xikn4Uw.png">
+<a href="https://github.com/ImPavloh/showdownclash/blob/main/html/contacto.html" target="_blank"><img src="https://i.imgur.com/xikn4Uw.png"></a>
 
 ### juego.html
-<img src="https://i.imgur.com/DWHPglO.png">
+<a href="https://github.com/ImPavloh/showdownclash/blob/main/html/juego.html" target="_blank"><img src="https://i.imgur.com/DWHPglO.png"></a>
+
+### error.html
+<a href="https://github.com/ImPavloh/showdownclash/blob/main/html/error.html" target="_blank"><img src="https://i.imgur.com/DbNZj1J.png"></a>
 
 ## 📝 Créditos
 - Página web creada por mi.

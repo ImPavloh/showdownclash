@@ -21,6 +21,7 @@
 * {
 	user-select: none !important; /* Para que no se pueda seleccionar texto */
 	font-family: 'New Super Mario Font U', sans-serif; /* Estilo de fuente Mario importada en html */;
+	box-sizing: border-box;
 }
 
 html, body, iframe {
@@ -76,6 +77,7 @@ header img {
 	width: 5vw;
 	height: 5vw;
 	background-size: cover;
+	transition: 0s;
 }
 
 header > div {
@@ -145,7 +147,7 @@ fieldset {
 	z-index: 2;
 }
 
-#index, #juego, #contacto {
+#index, #juego, #contacto, #error {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -159,7 +161,7 @@ fieldset {
 #juego { background: url(../recursos/fondo3.png) no-repeat bottom / cover; /* Fondo del apartado index */ }
 #index { background: url(../recursos/fondo2.png) no-repeat bottom / cover; /* Fondo del apartado ayuda */ }
 #contacto { background: url(../recursos/fondo.jpg) no-repeat center / cover; /* Fondo del apartado contacto */ }
-
+#error { background: url(../recursos/castillo.jpg) no-repeat top / cover; /* Fondo del apartado error */ }
 #iframecontenedor, #index, #juego {
 	margin: 0px;
 	padding: 0px;
@@ -210,6 +212,20 @@ header, .contenedor2, .contenedor, .estado, .instrucciones {
 	border-radius: 1.5vw;
 	border: 0.25vw white solid;
 	animation: aparicion 1s ease 0s 1 normal;
+}
+
+.error {
+	padding: 30px;
+	border-radius: 25px;
+	border: 5px rgba(255, 171, 171, 0.8) solid;
+	background-color: rgba(255, 118, 118, 0.7);
+	animation: aparicion 1s ease 0s 1 normal;
+}
+
+.headerror {
+	background-image: none !important; /* quita la imagen de fondo que por defecto puse */
+    background-color: rgba(11, 39, 2, 0.6);
+	border-bottom: 5px white solid;
 }
 
 .contenedor3 { width: 80%; }
@@ -402,6 +418,10 @@ header, .contenedor2, .contenedor, .estado, .instrucciones {
 	.contenedor4 {
 		flex-wrap: wrap;
 	}
+	footer {
+		border-top-right-radius: 30%;
+		border-top-left-radius: 30%;
+	}
 }
 
 @media screen and (max-width: 480px) {
@@ -410,6 +430,10 @@ header, .contenedor2, .contenedor, .estado, .instrucciones {
 	}
 	.contenedor3, .boton-link {
 		width: 90%;
+	}
+	footer {
+		border-top-right-radius: 15%;
+		border-top-left-radius: 15%;
 	}
 }
 
@@ -454,7 +478,7 @@ Demasiadas tal vez, pero quedan bien :)
     100% { transform: scale3d(1, 1, 1); background-image: url('../recursos/bloque-usado.png'); box-shadow: none; }
 }
 @keyframes parpadeo { /* animacion infinita de decoracion del bloque hasta que se haga clic */
-    0%, 50%, 100% { opacity: 0.5; }
+    0%, 50%, 100% { opacity: 0.75; }
     25%, 75% { opacity: 1; }
 }
 @keyframes aparicion { /* animacion de aparicion */
