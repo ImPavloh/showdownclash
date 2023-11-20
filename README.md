@@ -26,6 +26,7 @@ El sitio tiene varias páginas:
 - `juego.html`: Dedicada al juego en sí, proporcionando una experiencia de juego interactiva. No disponible en dispositivos móviles.
 - `contacto.html`: Permite a los usuarios enviar consultas, sugerencias o problemas relacionadas con el juego. (Formulario visual, aún no funcional)
 - `error.html`: Página de error que se muestra cuando el usuario intenta enviar los datos del formulario.
+- `lite.html`: Página "lite" sin animaciones, estilos mínimos y con un diseño más sencillo.
 
 - `style.css`: Aarchivo de estilos, donde está la tipografía, animaciones y diseño general.
 
@@ -41,6 +42,9 @@ El sitio tiene varias páginas:
 
 ### error.html
 <a href="https://github.com/ImPavloh/showdownclash/blob/main/html/error.html" target="_blank"><img src="https://i.imgur.com/DbNZj1J.png"></a>
+
+### lite.html
+<a href="https://github.com/ImPavloh/showdownclash/blob/main/html/lite.html" target="_blank"><img src="https://i.imgur.com/LT6CZo9.png"></a>
 
 ## 📝 Créditos
 - Página web creada por mi.

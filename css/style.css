@@ -158,10 +158,10 @@ fieldset {
     justify-content: space-between;
 }
 
+#error { background: url(../recursos/fondo4.jpg) no-repeat top / cover; /* Fondo del apartado error */ }
 #juego { background: url(../recursos/fondo3.png) no-repeat bottom / cover; /* Fondo del apartado index */ }
 #index { background: url(../recursos/fondo2.png) no-repeat bottom / cover; /* Fondo del apartado ayuda */ }
 #contacto { background: url(../recursos/fondo.jpg) no-repeat center / cover; /* Fondo del apartado contacto */ }
-#error { background: url(../recursos/castillo.jpg) no-repeat top / cover; /* Fondo del apartado error */ }
 #iframecontenedor, #index, #juego {
 	margin: 0px;
 	padding: 0px;
@@ -207,6 +207,7 @@ header, .contenedor2, .contenedor, .estado, .instrucciones {
 .formulario {
 	width: 50%;
 	background-color: rgba(255, 255, 255, 20%);
+	margin: 1vw;
 	padding: 1vw;
 	flex-direction: column;
 	border-radius: 1.5vw;
@@ -215,7 +216,8 @@ header, .contenedor2, .contenedor, .estado, .instrucciones {
 }
 
 .error {
-	padding: 30px;
+	margin: 1vw;
+	padding: 3vw;;
 	border-radius: 25px;
 	border: 5px rgba(255, 171, 171, 0.8) solid;
 	background-color: rgba(255, 118, 118, 0.7);
@@ -372,7 +374,7 @@ header, .contenedor2, .contenedor, .estado, .instrucciones {
     iPad - Tablets – 481px — 768px
     Portatil – 769px — 1024px
     PC – 1025px — 1200px
-    TV – 1201px and more
+    TV – +1201px
 */
 
 @media screen and (max-width: 768px) {
@@ -422,6 +424,10 @@ header, .contenedor2, .contenedor, .estado, .instrucciones {
 		border-top-right-radius: 30%;
 		border-top-left-radius: 30%;
 	}
+	header {
+		border-bottom-right-radius: 30%;
+		border-bottom-left-radius: 30%;
+	}
 }
 
 @media screen and (max-width: 480px) {
@@ -434,6 +440,10 @@ header, .contenedor2, .contenedor, .estado, .instrucciones {
 	footer {
 		border-top-right-radius: 15%;
 		border-top-left-radius: 15%;
+	}
+	header {
+		border-bottom-right-radius: 15%;
+		border-bottom-left-radius: 15%;
 	}
 }
 

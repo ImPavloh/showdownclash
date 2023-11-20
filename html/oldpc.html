@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Showdown Clash</title>
+    <link rel="shortcut icon" href="../recursos/logo.png" type="image/png">
+    <style> /* Estilos dentro del archivo para que no tenga que cargar un archivo externo */
+    body {
+        font-family: system-ui, 'Open Sans', 'Helvetica Neue', sans-serif; /* Intenta utilizar la fuente del sistema primero */
+        font-size: 16px;
+        margin: 0px;
+    }
+
+    table, th, td {
+        border: 1px solid #ddd;
+        border-collapse: collapse;
+    }
+
+    input[type="text"], input[type="email"], textarea {
+        width: 100%;
+        padding: 10px;
+        display: inline-block;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+    }
+    input[type="submit"], input[type="reset"] {
+        height: 40px;
+        width: 100px;
+        cursor: pointer;
+    }
+
+    header, footer {
+        margin-top: 20px;
+        background: #333;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+    }
+
+    iframe {
+        aspect-ratio: 16/9;
+        width: 50%;
+    }
+
+    nav ul {
+        padding: 10px;
+        margin: 0;
+        list-style: none;
+        background: #555;
+    }
+
+    nav li, nav {
+        display: inline;
+        text-align: center;
+    }
+
+    nav {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+    }
+    a {
+        color: white;
+        padding: 10px;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    main, hr { margin: 50px; }
+
+    article{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    } 
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <h1>Showdown Clash</h1>
+            <p>Showdown Clash es un juego plataformas multijugador basado en New Super Mario Bros</p>
+            <i>Recuerda que estás en una versión simple de la página web, en caso de querer ir a la original <a href="../index.html">haz clic aquí</a></i>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#jugar">Jugar</a></li>
+            <li><a href="#formulario">Contactar</a></li>
+            <li><a href="#estado">Estado del juego</a></li>
+            <li><a href="#instrucciones">Instrucciones</a></li>
+            <li><a href="#formulario">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <article id="jugar">
+            <iframe src="https://v6p9d9t4.ssl.hwcdn.net/html/9056563/index.html" title="Showdown Clash" allow="autoplay; midi; gamepad; cross-origin-isolated" scrolling="no" id="juegoIframe"></iframe>
+        </article>
+
+        <hr>
+
+        <article id="estado">
+            <h2>Estado del juego</h2>
+            <table>
+                <caption>Estado actualizado</caption>
+                <colgroup>
+                    <col>
+                    <col>
+                    <col>
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>Plataforma</th>
+                        <th>Version</th>
+                        <th>Estado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>WebGL</td>
+                        <td>1.0</td>
+                        <td>En produccion</td>
+                    </tr>
+                    <tr>
+                        <td>Windows</td>
+                        <td>1.0</td>
+                        <td>En desarrollo</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="3">Los estados pueden cambiar con futuras actualizaciones</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </article>
+
+        <hr>
+
+        <article id="instrucciones">
+            <h2>Instrucciones</h2>
+            <ol>
+                <li>
+                    <strong>Iniciar el juego</strong>
+                    <ul>
+                        <li>Haz clic en la pantalla inicial para comenzar.</li>
+                        <li>Busca o crea una sala y comienza la partida solo o espera a que se conecte algun jugador</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Configuracion del juego</strong>
+                    <ul>
+                        <li>Abre el menu de configuracion desde la pantalla principal.</li>
+                        <li>Ajusta los ajustes del sonido, graficos y demas.</li>
+                    </ul>
+                </li>
+            </ol>
+        </article>
+
+        <hr>
+
+        <article id="formulario">
+            <h2>Contacto</h2>
+            <form>
+                <fieldset>
+                    <legend >Informacion de contacto</legend>
+                    <label for="nombre">Nombre o usuario</label><br>
+                    <input type="text" id="nombre" name="nombre" required><br>
+                    
+                    <label for="correo">Correo electronico</label><br>
+                    <input type="email" id="correo" name="correo" required><br>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Mensaje</legend>
+                    <label for="mensaje">Mensaje o comentario</label><br>
+                    <textarea id="mensaje" name="mensaje" rows="3"></textarea>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Preferencias</legend>
+                    <input type="checkbox" id="preferenciaNotificaciones" name="preferenciaNotificaciones">
+                    <label for="preferenciaNotificaciones">Recibir notificaciones sobre actualizaciones importantes del juego</label><br>
+                    <input type="checkbox" id="preferenciaEventos" name="preferenciaEventos">
+                    <label for="preferenciaEventos">Estoy interesado en participar en eventos especiales o temporales</label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Plataforma del juego</legend>
+                    <div>
+                        <input type="radio" id="windows" name="opcion" value="Windows">
+                        <label for="windows">Windows</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="webgl" name="opcion" value="WebGL">
+                        <label for="webgl">WebGL</label>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Consulta</legend>
+                    <select id="seleccion" name="seleccion">
+                        <option value="general">Consulta General</option>
+                        <option value="jugador">Informe de jugador</option>
+                        <option value="conectividad">Informe de conectividad</option>
+                        <option value="bug">Informe de error o problema</option>
+                        <option value="sugerencia">Sugerencia de mejora</option>
+                    </select>
+                </fieldset>
+
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Limpiar">
+            </form>
+        </article>
+    </main>
+
+    <footer>
+        <div>
+            <p><b>Creado por Pavloh</b> ~ <i>Showdown Clash</i></p>
+            <p>Este proyecto no está afiliado con Nintendo</p>
+        </div>
+    </footer>
+</body>
+</html>
